@@ -1,0 +1,430 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Helvetica;
+}
+
+span{
+  color: #CC444B;
+}
+
+/* =========================== NAVIGATION SECTION ======================================*/
+.navbar {
+  display: flex;
+  position: relative;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  color: black;
+}
+
+.brand-title {
+  font-size: 1.5rem;
+  margin: .5rem;
+  font-weight: bold;
+}
+
+.navbar-links {
+  height: 100%;
+  margin: 0;
+}
+
+
+.navbar-links ul {
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-links ul li {
+  list-style: none;
+}
+
+.navbar-links ul li a {
+  display: block;
+  text-decoration: none;
+  color: black;
+  padding: 1rem;
+  margin-left: auto;
+}
+
+.navbar-links ul li a:hover {
+  color: #CC444B;
+}
+
+.toggle-button {
+  position: absolute;
+  top: .75rem;
+  right: 1rem;
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 21px;
+}
+
+.toggle-button .bar {
+  height: 3px;
+  width: 100%;
+  background-color: black;
+  border-radius: 10px;
+}
+
+
+.search{
+  box-sizing: border-box;
+  position: relative;
+  top: 0px;
+  bottom: 0px;
+  right: 0px;
+  left: 0px;
+  display: flex;
+  height: 42px;
+  width: 260px;
+  border: 1px solid  #000000;
+  min-width: auto;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: auto;
+  margin-bottom: auto;
+  max-width: auto;
+  display: inline-block;
+  justify-content: space-between;
+}
+
+
+.listings{
+  position: relative;
+  box-sizing: border-box;
+  display: flex;
+  border: 1px solid  #D3D3D3;
+  border-left: none;
+  border-right: none;
+  padding: 0;
+  margin-top: 10px;
+  height: 55px;
+  min-width:320px;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-left: 3px;
+  padding-right: 3px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 10px;
+  align-items: center;
+
+}
+
+.filter{
+  margin-left: 1rem;
+}
+
+.filter-btn a {
+  background-color:black;
+  color:#FFFFFF;
+  text-decoration: none;
+  text-transform: uppercase;
+  margin-left:auto;
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-right: 1rem;
+  padding:5px 19px;
+  font-size: .9rem;
+  font-weight: bold;
+}
+
+input{
+  background: transparent;
+  border: 0px;
+  outline: 0px;
+  margin-left: 10px;
+  font-size:1.1rem;
+}
+
+@media (max-width: 800px) {
+  .navbar {
+      flex-direction: column;
+      align-items: flex-start;
+  }
+
+  .toggle-button {
+      display: flex;
+  }
+
+  .navbar-links {
+      display: none;
+      width: 100%;
+  }
+
+  .navbar-links ul {
+      width: 100%;
+      flex-direction: column;
+  }
+
+  .navbar-links ul li {
+      text-align: center;
+  }
+
+  .navbar-links ul li a {
+      padding: .5rem 1rem;
+  }
+
+  .navbar-links.active {
+      display: flex;
+  }
+
+}
+
+/* =========================== CONTENT SECTION  SMALL DEVICES======================================*/
+
+@media (min-width: 320px) and (max-width:440px) {
+  .search{
+      box-sizing: border-box;
+      position: relative;
+      top: 0px;
+      bottom: 0px;
+      right: 0px;
+      left: 0px;
+      display: flex;
+      height: 42px;
+      width: 290px;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 8px;
+      margin-bottom: 10px;
+      max-width: auto;
+      display: flex;
+      flex-direction: column;
+      border-top-right-radius: 2px;
+      border-top-left-radius: 2px;
+      border-bottom-right-radius: 2px;
+      border-bottom-left-radius: 2px;
+      display: inline-block;
+      justify-content: space-between;
+      padding-top: .5rem;
+      padding-bottom: auto;
+      padding-left: .9rem;
+      padding-right: auto;
+    }
+    .heart{
+      display: inline-block;
+    }
+
+    .item img{
+      position: relative;
+      height: 165px;
+      width: 150px;
+    }
+
+    .item .price{
+      text-align:left; 
+      font-weight:bold;
+    }
+
+    .item a{
+      text-align:left; 
+      text-decoration:underline; 
+      color:black
+    }
+
+    .inventory-container{
+      display: grid;
+      grid-template-columns: auto auto;
+      padding-top: 10px;
+      padding-left:.4rem;
+    }
+    
+    .content-section-heading{
+      padding-top: 13px;
+      padding-left:.7rem;
+    }
+
+    .footer-copyright{
+      height: 50px;
+      border-top: 1px solid #D3D3D3;
+      margin-right: 10px;
+      padding-top:15px;
+      padding-right: 5px;
+      padding-left:5px;
+      padding-bottom:5px;
+      font-weight: bold;
+      font-size: .7rem;
+      display: flex;
+      justify-content: right;
+      position: relative;
+      bottom: 0;
+      margin-top:5px;
+    }
+
+    .footer-copyright p{
+      padding: 3px;
+    }
+
+    .footer-copyright ul li{
+      text-align: center;
+      display: inline-block;
+
+    }
+    .footer-copyright ul{
+      flex-direction: column;
+    }
+
+    .footer-copyright ul li a {
+      padding: .7rem .6rem;
+      margin: auto;
+      color: black;
+    }
+    .footer-copyright.active {
+      display: flex;
+    }
+
+    .heart-item{
+      display: flex;
+      justify-content:space-between;
+      padding: .8rem;
+      padding-bottom: 0rem;
+    }
+
+    .item{
+      padding-bottom: .4rem;
+
+    }
+
+}
+
+@media (min-width: 440px) and (max-width:770px) {
+  .search{
+      box-sizing: border-box;
+      top: 0px;
+      bottom: 0px;
+      right: 0px;
+      left: 0px;
+      height: 42px;
+      width: 450px;
+      margin-left: auto;
+      margin-top: 10px;
+      margin-bottom: 20px;
+      display: flex;
+      position: absolute;
+      margin-right: 110px;
+      top: 0;
+      display: inline-block;
+      justify-content: space-between;
+    }
+
+    .navbar{
+      position: fixed; /* Make it stick/fixed */
+      top: 0; /* Stay on top */
+      width: 100%; /* Full width */
+      transition: top 0.3s; /* Transition effect when sliding down (and up) */
+    }
+}
+
+@media (min-width: 770px) and (max-width:1030px) {
+    .navbar {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    .toggle-button {
+        display: flex;
+    }
+    .navbar-links {
+        display: none;
+        width: 100%;
+    }
+    .navbar-links ul {
+        width: 100%;
+        flex-direction: column;
+    }
+    .navbar-links ul li {
+        text-align: center;
+    }
+    .navbar-links ul li a {
+        padding: .5rem 1rem;
+    }
+    .navbar-links.active {
+        display: flex;
+    }
+  .search{
+      height: 42px;
+      width: 530px;
+      top:0;
+      position: absolute;
+      box-sizing: border-box;
+      top: 0px;
+      bottom: 0px;
+      right: 0px;
+      left: 0px;
+      margin-left: auto;
+      margin-top: 10px;
+      margin-bottom: 20px;
+      display: flex;
+      box-sizing: border-box;
+      position: absolute;
+      top: 0;
+      display: inline-block;
+      justify-content: space-between;
+    }
+
+    /* The sticky class is added to the navbar with JS when it reaches its scroll position */
+    .sticky {
+      position: fixed;
+      top: 0;
+      width: 100%;
+    }
+
+    /* Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new    position at the top of the page (position:fixed and top:0) */
+    .sticky + .content {
+      padding-top: 60px;
+    }
+}
+
+@media (min-width: 1030px) and (max-width:1450px) {
+  .search{
+    height: 42px;
+    width: 639px;
+    top:0;
+    position: absolute;
+    box-sizing: border-box;
+    top: 0px;
+    bottom: 0px;
+    right: 0px;
+    left: 0px;
+    margin-left: 250px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    display: flex;
+    box-sizing: border-box;
+    position: absolute;
+    top: 0;
+    display: inline-block;
+    justify-content: space-between;
+
+  }
+
+}
+
+@media (min-width: 1450px) and (max-width:2600px) {
+  .search{
+    height: 42px;
+    width: 900px;
+    top:0;
+    position: absolute;
+    box-sizing: border-box;
+    top: 0px;
+    bottom: 0px;
+    right: 0px;
+    left: 0px;
+    margin-left: 550px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    display: flex;
+    box-sizing: border-box;
+    position: absolute;
+    top: 0;
+    display: inline-block;
+    justify-content: space-between;
+  }
+
+}
